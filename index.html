@@ -24,7 +24,7 @@
             animation: backgroundShift 10s infinite alternate;
         }
 
-
+        /* Lune réaliste */
         .moon {
             position: absolute;
             top: 20px;
@@ -45,7 +45,7 @@
             padding: 20px;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 20px;
-            margin: 120px auto 10px; /* Ajustement pour la lune */
+            margin: 120px auto 10px;
             position: relative;
             z-index: 1;
             box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
@@ -64,6 +64,7 @@
             position: relative;
             opacity: 0;
             animation: slideIn 1s forwards 0.5s;
+            direction: rtl; /* Ajouté pour l'affichage correct de l'arabe */
         }
 
         h1:hover {
@@ -91,6 +92,7 @@
             position: relative;
             opacity: 0;
             animation: slideIn 1s forwards 1s;
+            direction: rtl; /* Ajouté pour l'affichage correct de l'arabe */
         }
 
         .arabic-text {
@@ -176,7 +178,7 @@
             animation: slideIn 1s forwards 3s;
         }
 
-
+        /* Particules et pluie d'étoiles */
         .particles {
             position: absolute;
             top: 0;
@@ -259,6 +261,7 @@
             100% { opacity: 0.2; transform: scale(1); }
         }
 
+        /* Responsivité */
         @media (max-width: 768px) {
             .container { padding: 15px; max-width: 100%; margin-top: 100px; }
             .moon { width: 80px; height: 80px; }
@@ -293,20 +296,20 @@
     <div class="moon"></div>
     <div class="particles" id="particles"></div>
     <div class="container">
-        <h1>Laylatul Qadr Mubarak</h1>
+        <h1>ليلة القدر مبارك</h1>
         
-        <h2>Sourate Al-Qadr</h2>
+        <h2>سورة القدر</h2>
         <div class="arabic-text">
             بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ<br>
             إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ ﴿١﴾<br>
             وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ ﴿٢﴾<br>
             لَيْلَةُ ٱلْقَدْرِ خَيْرٌۭ مِّنْ أَلْفِ شَهْرٍۢ ﴿٣﴾<br>
-            تَنَزَّلُ ٱلْمَلَٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍۢ ﴿٤﴾<br>
+            تَنَزَّلُ ٱلْمَلَٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم mِّن كُلِّ أَمْرٍۢ ﴿٤﴾<br>
             سَلَٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ ﴿٥﴾
         </div>
 
         <div class="milad-section">
-            <h2>Milad de Syedna Mufaddal Saifuddin Mubarak</h2>
+            <h2>ميلاد سيدنا مفضل سيف الدين مبارك</h2>
             <img src="https://www.thedawoodibohras.com/wp-content/uploads/2021/11/chancellor-aligarh-muslim-university-syedna-mufaddal-saifuddin.jpeg" alt="Syedna Mufaddal Saifuddin">
         </div>
 
@@ -324,7 +327,7 @@
     <script>
         const particlesContainer = document.getElementById('particles');
         
-
+        // Particules élégantes
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -335,7 +338,7 @@
             setTimeout(() => particle.remove(), 2000);
         }
 
-
+        // Pluie d'étoiles
         function createStar() {
             const star = document.createElement('div');
             star.className = 'star';
@@ -350,7 +353,7 @@
         setInterval(createParticle, 500);
         setInterval(createStar, 200);
 
-
+        // Interactions
         document.querySelectorAll('h2').forEach(h2 => {
             h2.addEventListener('click', () => {
                 h2.style.animation = 'bounce 0.5s';
