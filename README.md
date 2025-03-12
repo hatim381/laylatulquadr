@@ -1,2 +1,0 @@
-# laylatulquadr
-message laylatul quadr
